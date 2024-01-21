@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/app.css">
+    <title>{{namePage}}</title>
+</head>
+<body>
+    <div class="name-site container">
+        <h1>
+            <a href="/">LookPosting</a>
+        </h1>
+
+        {{#if bar}}
+            <div class="finder">
+                <form action="#">
+                    <input type="text" class="search">
+                    <input type="submit" value="search">
+                </form>
+            </div>
+
+        {{/if}}
+    </div>
+
+    <header class="site-header container separator">
+        <h2>{{namePage}}</h2>
+        {{#if tagline}}
+            <p class="tagline">{{tagline}}</p>
+        {{/if}}
+        {{#if button}}
+            <a href="/vacancies/new" class="btn btn-blue"> Publish new vacancy</a>
+        {{/if}}
+    </header>
+
+    <div class="main-content container">
+        {{{body}}}
+    </div>
+</body>
+</html>

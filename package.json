@@ -1,0 +1,26 @@
+{
+  "name": "lookposting",
+  "version": "1.0.0",
+  "description": "LookPosting portal with Node.js, Mongoose Handlebars",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmRodr/lookposting.git"
+  },
+  "author": "Emanuel Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmRodr/lookposting/issues"
+  },
+  "homepage": "https://github.com/EmRodr/lookposting#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
