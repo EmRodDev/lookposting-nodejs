@@ -24,3 +24,43 @@ exports.addVacancy = async (req, res) => {
     //Redirect
     res.redirect(`/vacancies/${newVacancy.url}`);
 }
+
+// Show a vacancy
+
+exports.showVacancy = async (req, res, next) => {
+    const vacancy = await Vacancy.findOne({url: req.params.url}).lean();
+
+    //If no results
+    if(!vacancy) return next();
+
+    res.render('vacancy', {
+        vacancy,
+        namePage : vacancy.title,
+        bar: true
+    })
+}
+
+exports.formEditVacancy = async (req, res, next) => {
+    const vacancy = await Vacancy.findOne({url: req.params.url}).lean();
+
+    //If no results
+    if(!vacancy) return next();
+
+    res.render('edit-vacancy', {
+        vacancy,
+        namePage: `Edit - ${vacancy.title}`
+    })
+}
+
+exports.editVacancy = async (req, res) => {
+    const updatedVacancy = req.body;
+
+    updatedVacancy.skills = req.body.skills.split(',');
+
+    const vacancy = await Vacancy.findOneAndUpdate({url: req.params.url}, updatedVacancy, {
+        new: true,
+        runValidators: true
+    });
+
+    res.redirect(`/vacancies/${vacancy.url}`);
+}
