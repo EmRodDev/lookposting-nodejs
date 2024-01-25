@@ -49,7 +49,7 @@ vacacanciesSchema.pre('save', function(next) {
 
     //Create the url
     const url = slug(this.title);
-    this.url = `${url}-${shortid.generate}`;
+    this.url = `${url}-${shortid.generate()}`;
 
     next();
 })
