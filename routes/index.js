@@ -13,5 +13,13 @@ module.exports = () => {
 
     router.post('/vacancies/new',vacanciesController.addVacancy);
 
+    // Show vacancy (singular)
+    router.get('/vacancies/:url', vacanciesController.showVacancy);
+
+    // Edit vacancy
+    router.get('/vacancies/edit/:url', vacanciesController.formEditVacancy)
+
+    router.post('/vacancies/edit/:url', vacanciesController.editVacancy)
+
     return router;
 };
