@@ -221,6 +221,7 @@ h3 {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        padding-top: 3rem;
     }
     .vacancy-container main{
         flex: 0 0 60%;
@@ -345,6 +346,9 @@ trix-toolbar .trix-button--icon-strike {
     text-decoration: none;
 }
 
+.sidebar {
+}
+
 .list-knowledges {
     list-style: none;
     padding: 0;    
@@ -406,17 +410,17 @@ p.candidates {
     align-self: flex-start;
     margin-right: 1rem;
 }
-.cerrar-sesion p, 
-.cerrar-sesion a {
+.log-out p, 
+.log-out a {
     margin:  0 2rem 0 0 ;
     color: #888;
 }
-.cerrar-sesion {
+.log-out {
     margin-top: 2rem;
     color: white;
     display: flex;
 }
-.cerrar-sesion img {
+.log-out img {
         width: 80px;
 }
 .botones {
