@@ -1,8 +1,10 @@
-<main class="list-vacants">
+<main class="list-vacancies">
     <h2>Vacancy list</h2>
-    <div class="vacancy">
+    
         {{#if vacancies.length}}
+
             {{#each vacancies}}
+            <div class="vacancy">
                 <div class="box">
                     <h3>{{this.company}}</h3>
                     <p class="position">{{title}}</p>
@@ -20,9 +22,9 @@
                 <div class="box center-vertical">
                     <a href="/vacancies/{{url}}" class="btn btn-green">More info</a>
                 </div>
+            </div>
             {{/each}}
-    {{else}}
-        <p>There is no vacancies</p>
-    {{/if}}
-    </div>
+        {{else}}
+            <p>There is no vacancies</p>
+        {{/if}}
 </main>

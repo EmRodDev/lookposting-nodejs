@@ -42,7 +42,12 @@ const vacacanciesSchema = new mongoose.Schema({
         name: String,
         email: String,
         cv: String
-    }]
+    }],
+    author: {
+        type: mongoose.Schema.ObjectId,
+        ref: 'Users',
+        required: 'The author is required'
+    }
 });
 
 vacacanciesSchema.pre('save', function(next) {
@@ -52,6 +57,10 @@ vacacanciesSchema.pre('save', function(next) {
     this.url = `${url}-${shortid.generate()}`;
 
     next();
-})
+});
+
+//Create an index
+
+vacacanciesSchema.index({title: 'text'});
 
 module.exports = mongoose.model('Vacancy', vacacanciesSchema);

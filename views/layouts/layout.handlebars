@@ -19,12 +19,22 @@
 
         {{#if bar}}
             <div class="finder">
-                <form action="#">
-                    <input type="text" class="search">
+                <form action="/search" method="POST">
+                    <input type="text" name="q" class="search" placeholder="Search by vacancy names">
                     <input type="submit" value="search">
                 </form>
             </div>
 
+        {{/if}}
+        {{#if log_out}}
+            <div class="log-out">
+                <p>Hi, {{name}}</p>
+                {{#if image}}
+                    <img src="/uploads/profiles/{{image}}" class="admin-profile">
+                {{/if}}
+                <a href="/management">Management</a>
+                <a href="/log-out">Log out</a>
+            </div>
         {{/if}}
     </div>
 
@@ -39,6 +49,12 @@
     </header>
 
     <div class="main-content container">
+        {{#if messages}}
+            <div class="alerts">
+                {{#showAlerts messages}}
+                {{/showAlerts}}
+            </div>
+        {{/if}}
         {{{body}}}
     </div>
     <script src="/dist/bundle.js"></script>

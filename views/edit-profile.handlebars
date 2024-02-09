@@ -1,0 +1,26 @@
+<main class="container">
+    <form action="/edit-profile" method="POST" class="default-form" enctype="multipart/form-data">
+        <div class="field">
+            <label>Name</label>
+            <input value="{{user.name}}" type="text" name="name" placeholder="Your name" >
+        </div>
+        <div class="field">
+            <label>Email</label>
+            <input value="{{user.email}}" type="email" name="email" placeholder="Your email" >
+        </div>
+        <div class="field">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Your new password">
+        </div>
+        <div class="field">
+            <label>Image</label>
+            <input type="file" name="image" placeholder="Your profile image">
+            {{#if user.image}}
+                <img src="uploads/profiles/{{user.image}}" class="admin-profile">
+            {{/if}}
+        </div>
+        <div class="field">
+            <input type="submit" class="btn btn-blue" value="Save changes">
+        </div>
+    </form>
+</main>

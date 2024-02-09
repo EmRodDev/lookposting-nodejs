@@ -1,0 +1,24 @@
+<main class="list-candidates">
+    <h2>Candidates list</h2>
+    {{#if candidates.length}}
+        {{#each candidates}}
+        <div class="candidate">
+            <div class="box">
+                <p class="tag">Name:</p>
+                <p class="name">{{name}}</p> 
+            </div>
+            <div class="box">
+                <p class="tag">Email:</p>
+                <p class="name">{{email}}</p> 
+            </div>
+            <div class="box center-vertical">
+                <a href="/uploads/cv/{{cv}}" class="btn btn-green ">
+                    Show CV
+                </a>
+            </div>
+        </div>
+        {{/each}}
+    {{else}}
+    <p>There is no candidates</p>
+    {{/if}}
+</main>

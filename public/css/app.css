@@ -33,6 +33,7 @@ h3 {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .separator {
     padding-bottom: 2rem;
     padding-top:2rem;
@@ -213,7 +214,7 @@ h3 {
     color: #616065;
     font-size: 2.4rem;
 }
-.content-top {
+.content-superior {
     margin-bottom: 6rem;
 }
 @media (min-width:768px){
@@ -221,7 +222,6 @@ h3 {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        padding-top: 3rem;
     }
     .vacancy-container main{
         flex: 0 0 60%;
@@ -346,9 +346,6 @@ trix-toolbar .trix-button--icon-strike {
     text-decoration: none;
 }
 
-.sidebar {
-}
-
 .list-knowledges {
     list-style: none;
     padding: 0;    
@@ -395,6 +392,7 @@ trix-toolbar .trix-button--icon-strike {
 
 /** Admin **/
 
+
 p.candidates {
     font-weight: 400;
     color: white;
@@ -405,10 +403,11 @@ p.candidates {
     text-decoration: none;
     color: #616065;
 }
-.admin-perfil {
-    width: 120px;
+.admin-profile {
+    width: 60px;
     align-self: flex-start;
     margin-right: 1rem;
+    border-radius: 50%;
 }
 .log-out p, 
 .log-out a {
@@ -421,16 +420,16 @@ p.candidates {
     display: flex;
 }
 .log-out img {
-        width: 80px;
+        width: 30px;
 }
-.botones {
+.buttons {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     padding: 2rem 0 5rem 0;
     margin-bottom: 5rem;
 }
-.botones a {
+.buttons a {
     margin-right: 2rem;
 }
 .list-candidates p,
